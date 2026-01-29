@@ -7,91 +7,155 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+      background: #0f172a;
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #e5e7eb;
     }
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 40px auto;
-      background: #ffffff;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card {
+      background: #1e293b;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
     .header {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
     }
     .profile-img {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #ddd;
+      border: 4px solid #6366f1;
     }
     h1 {
       margin: 0;
+      font-size: 28px;
     }
     h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      margin-top: 30px;
+      margin: 0 0 16px 0;
+      font-size: 20px;
+      color: #a5b4fc;
     }
     p {
       margin: 6px 0;
+      line-height: 1.6;
     }
     ul {
-      padding-left: 20px;
+      padding-left: 18px;
+      margin: 8px 0 0 0;
     }
-    .contact p {
-      margin: 4px 0;
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .badge {
+      display: inline-block;
+      background: #312e81;
+      color: #c7d2fe;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .skill {
+      margin-bottom: 14px;
+    }
+    .bar {
+      background: #334155;
+      border-radius: 999px;
+      overflow: hidden;
+      height: 10px;
+      margin-top: 6px;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      background: #6366f1;
+    }
+    @media(max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <img src="IMG_20260128_231246.jpg" alt="Foto Profil" class="profile-img" />
-      <div>
-        <h1>Zahran Khaliq Fahrezi</h1>
-        <p>Pelajar SMA Kelas 12</p>
+
+    <div class="card">
+      <div class="header">
+        <img src="IMG_20260128_231246.jpg" alt="Foto Profil" class="profile-img" />
+        <div>
+          <h1>Zahran Khaliq Fahrezi</h1>
+          <p>Pelajar SMA</p>
+          <p>Bandung, 26 Oktober 2007</p>
+        </div>
       </div>
     </div>
 
-    <div class="contact">
-      <h2>Kontak</h2>
-      <p>Telepon: 085723495394</p>
-      <p>Email: zahranfahrezi942@gmail.com</p>
-      <p>Instagram: @_zavinn</p>
+    <div class="card">
+      <h2>Tentang Saya</h2>
+      <p>Saya adalah pelajar SMA yang memiliki minat pada desain grafis dan pengembangan diri. Saya terbiasa bekerja dalam organisasi sekolah dan mampu belajar mandiri. Saya tertarik mengembangkan keterampilan kreatif serta siap belajar hal baru.</p>
     </div>
 
-    <h2>Data Pribadi</h2>
-    <p>Tempat, Tanggal Lahir: Bandung, 26 Oktober 2007</p>
-    <p>Umur: 18 Tahun</p>
+    <div class="grid">
+      <div class="card">
+        <h2>Kontak</h2>
+        <p>Telepon: 085723495394</p>
+        <p>Email: zahranfahrezi942@gmail.com</p>
+        <p>Instagram: @_zavinn</p>
+      </div>
 
-    <h2>Pendidikan</h2>
-    <ul>
-      <li>SMA KP Baleendah, Kelas 12</li>
-      <li>SMPN 2 Baleendah</li>
-    </ul>
+      <div class="card">
+        <h2>Keahlian</h2>
+        <div class="skill">Desain Grafis
+          <div class="bar"><span style="width:80%"></span></div>
+        </div>
+        <div class="skill">Bahasa Inggris Pasif
+          <div class="bar"><span style="width:65%"></span></div>
+        </div>
+      </div>
+    </div>
 
-    <h2>Keahlian</h2>
-    <ul>
-      <li>Desain grafis</li>
-      <li>Bahasa Inggris pasif</li>
-    </ul>
+    <div class="grid">
+      <div class="card">
+        <h2>Pendidikan</h2>
+        <p>SMA KP Baleendah</p>
+        <p>2023 - 2026</p>
+        <br />
+        <p>SMPN 2 Baleendah</p>
+        <p>2020 - 2023</p>
+      </div>
 
-    <h2>Pengalaman dan Prestasi</h2>
-    <ul>
-      <li>Anggota OSIS</li>
-      <li>Juara 1 lomba catur</li>
-    </ul>
+      <div class="card">
+        <h2>Pengalaman dan Prestasi</h2>
+        <ul>
+          <li>Anggota OSIS</li>
+          <li>Juara 1 lomba catur</li>
+        </ul>
+      </div>
+    </div>
 
-    <h2>Hobi</h2>
-    <p>Membaca</p>
+    <div class="card">
+      <h2>Hobi</h2>
+      <span class="badge">Membaca</span>
+    </div>
+
   </div>
 </body>
 </html>
